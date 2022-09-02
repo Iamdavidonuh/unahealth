@@ -8,6 +8,7 @@ services:
       POSTGRES_PASSWORD: una_pass
       POSTGRES_USER: una_user
       POSTGRES_DB: unadb
+      POSTGRES_HOST: db
 
   web:
     build: .
@@ -18,7 +19,13 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    restart: on-failure
+    restart: always
+
+    environment:
+      POSTGRES_PASSWORD: una_pass
+      POSTGRES_USER: una_user
+      POSTGRES_DB: unadb
+      POSTGRES_HOST: db
 
   
 volumes:
