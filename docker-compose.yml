@@ -4,6 +4,10 @@ services:
     image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: una_pass
+      POSTGRES_USER: una_user
+      POSTGRES_DB: unadb
 
   web:
     build: .

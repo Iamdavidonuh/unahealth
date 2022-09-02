@@ -9,3 +9,8 @@
 # Browsable api available at
 
 http://127.0.0.1:8000/swagger/
+
+# Note
+
+- To load sample data
+  `python manage.py loadcsv`
