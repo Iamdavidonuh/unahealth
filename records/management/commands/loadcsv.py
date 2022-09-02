@@ -24,9 +24,10 @@ class Command(BaseCommand):
                 # the below statement will skip the two lines
                 next(csv_reader)
                 next(csv_reader)
+                user_id = os.path.splitext(data)[0]
                 for lines in csv_reader:
                     UserGlucoseLevels.objects.create(
-                        user_id=csv_file.name,
+                        user_id=user_id,
                         device=lines[0],
                         serial_number=lines[1],
                         device_timestamp=parser.parse(lines[2]),

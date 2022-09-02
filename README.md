@@ -3,7 +3,6 @@
 ### If i had the time i would have done the following
 
 - Written code tests, i sacrified tests so i could complete more given i already wasted time with the csv files
-- Fix the loadcsv error
 - Implement a download to csv, json and excel feature
 - Added a proper readme to explain endpoints
 
