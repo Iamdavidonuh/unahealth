@@ -12,10 +12,7 @@ class NameNormalizer:
         field_names_list = field_names.split(",")
 
         for field_name, german_name in zip(field_names_list, CSV_HEADERS):
-            print(field_name, german_name)
             self.payload.update({field_name: german_name})
-
-        print(self.payload)
 
     def get_field_name_german(self, field_name):
         return self.payload[field_name]
